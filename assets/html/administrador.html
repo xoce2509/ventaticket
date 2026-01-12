@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Administrador</title>
+  <link rel="stylesheet" href="/ventaticket/assets/css/administrador.css">
+  <script src="/ventaticket/index.html"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="menu">
+      <button id="cerrarsession" onclick="window.location.href='/ventaticket/index.html'">Cerrar Sesión</button>
+      <button id="imprimir" onclick="alert('¡Impresora Termina desconectada, conecte porfavor para poder imprimir sus reporte!')">Imprimir</button>
+      <button id="guardarpdf" onclick="alert('¡Servidor desconectado, porfavor conecte impresora termina y reconecte el servidor!')">Guardar en PDF</button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Resumen global (tres cards en fila) -->
+    <div class="row tight">
+      <div class="card card-ventas">
+        <h3>Resumen de Ventas</h3>
+        <table>
+          <thead>
+            <tr><th>Periodo</th><th>Total Ventas</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hoy</td><td>C$2,500</td></tr>
+            <tr><td>Semana</td><td>C$15,000</td></tr>
+            <tr><td>Mes</td><td>C$60,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card card-comisiones">
+        <h3>Comisiones de Vendedores</h3>
+        <table>
+          <thead>
+            <tr><th>Vendedor</th><th>Ventas</th><th>Comisión (10%)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Juan Perez</td><td>C$15,000</td><td>C$1,500</td></tr>
+            <tr><td>Facundo Lopez</td><td>C$10,000</td><td>C$1,000</td></tr>
+            <tr><td>Panfilo Vaca </td><td>C$17,500</td><td>C$1,750</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card card-utilidad">
+        <h3>Movimiento Financiero Mensual</h3>
+        <table>
+          <thead>
+            <tr><th>Ciudad</th><th>Ingresos</th><th>Comisiones</th><th>Neto</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Managua</td><td>C$60,000</td><td>C$6,000</td><td>C$54,000</td></tr>
+            <tr><td>Matagalpa</td><td>C$25,000</td><td>C$2,500</td><td>C$22,500</td></tr>
+            <tr><td>Esteli</td><td>C$15,000</td><td>C$1,500</td><td>C$13,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Gestión de vendedores -->
+    <div class="row tight">
+      <div class="card card-form">
+        <h3>Crear Vendedor</h3>
+        <form>
+          <label>Fecha de Contratación</label>
+          <input type="date" placeholder="Fecha de Contratación">
+          <label>Nombre del Vendedor</label>
+          <input type="text" placeholder="Nombre y Apellido">
+          <label>Ciudad</label>
+          <input type="text" placeholder="Ciudad">
+          <label>Cedula</label>
+          <input type="text" placeholder="000-000000-0000A">
+          <label>WhatSapp</label>
+          <input type="text" placeholder="+505 0000-0000">
+          <label>Usuario</label>
+          <input type="text" placeholder="Usuario">
+          <label>Contraseña</label>
+          <input type="text" placeholder="Contraseña">
+          <button type="submit" onclick="alert('¡Guardo de manesa existo!')">Registrar</button>
+        </form>
+      </div>
+
+      <div class="card card-table">
+        <h3>Lista de Vendedores</h3>
+        <table>
+          <thead>
+            <tr><th>Contratacion</th><th>Nombre</th><th>Ciudad</th><th>WhatSapp</th><th>Usuario</th><th>Contraseña</th><th>Estado</th><th>Control</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01/05/2022</td>
+              <td>Juan Perez</td>
+              <td>Managua</td>
+              <td>+505 1234-5678</td>
+              <td>jperez</td>
+              <td>contraseña123</td>
+              <td>Activo</td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td>11/09/2022</td>
+              <td>Facundo Lopez</td>
+              <td>Matagalpa</td>
+              <td>+505 8765-4321</td>
+              <td>flopez</td>
+              <td>contraseña456</td>
+              <td>Activo</td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td>28/03/2025</td>
+              <td>Panfilo Vaca</td>
+              <td>Esteli</td>
+              <td>+505 1234-5678</td>
+              <td>pvaca</td>
+              <td>contraseña789</td>
+              <td>Activo</td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('¡Esta funcion, no esta activa')">Activar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Gestión de clientes -->
+    <div class="row tight">
+      <div class="card card-form">
+        <h3>Crear Cliente</h3>
+        <form>
+          <label>Registro</label>
+          <input type="datetime-local" name="registro" id="registro">
+          <label>Tipo de Cliente</label>
+          <select>
+            <option>Selecciones Tipo de Cliente</option>
+            <option>Regular</option>
+            <option>Frecuente</option>
+            <option>Premium</option>
+          </select>
+          <label>Nombre del Cliente</label>
+          <input type="text" placeholder="Nombre y Apellido">
+          <label>Ciudad</label>
+          <input type="text" placeholder="Ciudad">
+          <label>WhatSapp</label>
+          <input type="text" placeholder="+505 0000-0000">
+          <label>Asignar Vendedor</label>
+          <select>
+            <option>Selecciones Vendedor</option>
+            <option>Juan Perez</option>
+            <option>Facundo Lopez</option>
+            <option>Panfilo Vaca</option>
+          </select>
+          <label>Usuario</label>
+          <input type="text" placeholder="Usuario">
+          <label>Contraseña</label>
+          <input type="text" placeholder="Contraseña">
+          <button type="submit" onclick="alert('¡Guardo de manera exitosa!')">Registrar</button>
+        </form>
+      </div>
+
+      <div class="card card-table">
+        <h3>Lista de Clientes</h3>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>WhatSapp</th><th>Usuario</th><th>Contraseña</th><th>Vendedor Asignado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana López</td>
+              <td>+505 1234-5678</td>
+              <td>Alopez</td>
+              <td>clave123</td>
+              <td>Juan Perez</td>
+            </tr>
+            <tr>
+              <td>Mario Martinez</td>
+              <td>+505 5678-5678</td>
+              <td>Mmartinez</td>
+              <td>hoyganarelaloto</td>
+              <td>Facundo Lopez</td>
+            </tr>
+            <tr>
+              <td>Luisa Gómez</td>
+              <td>+505 8765-4321</td>
+              <td>Lgomez</td>
+              <td>contraseña456</td>
+              <td>Panfilo Vaca</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Gestión de administradores -->
+    <div class="row tight">
+      <div class="card card-form">
+        <h3>Crear Administrador</h3>
+        <form>
+          <label>Nombre del Administrador</label>
+          <input type="text" placeholder="Nombre">
+          <label>Usuario</label>
+          <input type="text" placeholder="Usuario">
+          <label>Contraseña</label>
+          <input type="text" placeholder="Contraseña">
+          <select>
+            <option>Seleccione Rol</option>
+            <option>Administrador</option>
+            <option>Superadmin</option>
+            <option>Gerente Propietario</option>
+            <option>La Jefa - Esposa del Dueño</option>
+          </select>
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+
+      <div class="card card-table">
+        <h3>Lista de Administradores</h3>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Usuario</th><th>Contraseña</th><th>Rol</th><th>Estado</th><th>Acción</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>José Ampie</td>
+              <td>Jampie</td>
+              <td>jampie123</td>
+              <td>Administrador</td>
+              <td>Activo</td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td>María Garcias</td>
+              <td>Mgarcias</td>
+              <td>yatengotrabajo</td>
+              <td>Superadmin</td>
+              <td>Activo</td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button>
+              </td>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button onclick="alert('Función desactivada')">Desactivar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 VentaTicket. Panel Administrador</p>
+  </footer>
+</body>
+</html>

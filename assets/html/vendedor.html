@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Vendedor</title>
+  <link rel="stylesheet" href="/ventaticket/assets/css/vendedor.css">
+</head>
+<body>
+  <!-- Header con menú horizontal -->
+  <header>
+    <nav class="menu">
+      <button onclick="window.location.href='/ventaticket/index.html'">Cerrar Sesión</button>
+      <button onclick="alert('¡Impresora Termina desconectada, conecte porfavor para poder imprimir sus reporte!')">Imprimir</button>
+      <button onclick="alert('¡Servidor desconectado, porfavor conecte impresora termina y reconecte el servidor!')">Guardar en PDF</button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Contenedor de formulario + tabla -->
+    <div class="row">
+      <!-- Formulario -->
+      <div class="card">
+        <h3>Formulario de Ventas</h3>
+        <form>
+          <label>Fecha y Hora de Venta</label>
+          <input type="datetime-local">
+
+          <label>Cliente</label>
+          <input type="text" placeholder="Nombre del cliente">
+
+          <label>Número de Venta</label>
+          <input type="text" placeholder="Ej: 12345">
+
+          <label>Precio</label>
+          <input type="number" placeholder="C$">
+
+          <label>Total</label>
+          <input type="text" placeholder="C$0" readonly>
+
+          <button type="submit" onclick="alert('Venta Registrada')">Registrar Venta</button>
+        </form>
+      </div>
+
+      <!-- Tabla de ventas -->
+      <div class="card">
+        <h3>Lista de Ventas</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Números</th>
+              <th>Precio</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jose</td>
+              <td>12345</td>
+              <td>C$50</td>
+              <td>C$50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Resumen debajo -->
+    <div class="card resumen">
+      <h3>Libro Diario de Ingresos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Venta por dias</th>
+            <th>Costo por Numero</th>
+            <th>Ingresos</th>
+            <th>Comisión (10%)</th>
+            <th>Neto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>300</td>
+            <td>C$20.00</td>
+            <td>C$6,000.00</td>
+            <td>C$600.00</td>
+            <td>C$5,400.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 VentaTicket. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

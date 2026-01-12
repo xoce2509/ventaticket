@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Cliente</title>
+  <link rel="stylesheet" href="/ventaticket/assets/css/cliente.css">
+</head>
+<body>
+  <!-- Header con menú horizontal -->
+  <header>
+    <nav class="menu">
+      <button onclick="window.location.href='/ventaticket/index.html'">Cerrar Sesión</button>
+      <button onclick="alert('¡Impresora Termina desconectada, conecte porfavor para poder imprimir sus reporte!')">Imprimir</button>
+      <button onclick="alert('¡Servidor desconectado, porfavor conecte impresora termina y reconecte el servidor!')">Guardar en PDF</button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="row">
+      <!-- Formulario -->
+      <div class="card card-form">
+        <h3>Compra de Número</h3>
+        <form>
+          <label>Fecha y Hora de Compra</label>
+          <input type="datetime-local">
+
+          <label>Seleccionar Vendedor</label>
+          <select>
+            <option>Seleccione Vendedor</option>
+            <option>Juan Perez</option>
+            <option>Facundo Lopez</option>
+            <option>Panfilo Vaca</option>
+          </select>
+
+          <label>Nombre del Cliente</label>
+          <input type="text" placeholder="Nombre del cliente">
+
+          <label>Número de Venta</label>
+          <input type="text" placeholder="Ej: 1,2,3,4,5">
+
+          <label>Precio</label>
+          <input type="number" placeholder="C$">
+
+          <label>Total</label>
+          <input type="text" placeholder="C$0" readonly>
+
+          <button type="submit" onclick="alert('Gracias por su Compra')">Registrar Compra</button>
+        </form>
+      </div>
+
+      <!-- Tabla de compras -->
+      <div class="card card-compras">
+        <h3>Tabla de Compras</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Nombre</th>
+              <th>Número</th>
+              <th>Precio</th>
+              <th>Total</th>
+              <th>Proximo Sorteo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11/01/2026</td>
+              <td>Jose Orozco</td>
+              <td>10,15,22,45,77</td>
+              <td>C$100</td>
+              <td>C$500</td>
+              <td><progress value="8" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><progress value="0" max="10"></progress></td>
+            </tr>
+            <style>
+              progress{
+                background-color: #00ff88;
+                border-radius: 2px;
+                height: 20px;
+                width: 50px;
+              }
+            </style>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tabla de números de suerte -->
+      <div class="card card-suerte">
+        <h3>Números de Suerte Semanal</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Número</th>
+              <th>Recomendado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td>
+              <td>17</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>Martes</td>
+              <td>45</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Miercoles</td>
+              <td>99</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>Jueves</td>
+              <td>23</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>Viernes</td>
+              <td>25</td>
+              <td>09</td>
+            </tr>
+            <tr>
+              <td>Sabado</td>
+              <td>01</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Domingo</td>
+              <td>88</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 VentaTicket. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

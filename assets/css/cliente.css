@@ -1,0 +1,174 @@
+:root {
+  --bg-dark: #1e1e2f;     /* Fondo principal */
+  --bg-card: #2a2a3d;     /* Fondo de las cards */
+  --accent: #00ff88;      /* Verde neón */
+  --text-light: #e0e0e0;  /* Texto claro */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-dark); /* Fondo oscuro */
+  color: var(--text-light);         /* Texto claro */
+}
+
+/* Header */
+header {
+  background: #151521;
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu button {
+  background: var(--accent);
+  color: #151521;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background: #00cc66;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* Row con proporciones exactas */
+.row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card); /* Fondo oscuro de card */
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: var(--text-light);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Proporciones */
+.card-form {
+  flex: 0 0 15%;
+}
+
+.card-compras {
+  flex: 0 0 57%;
+}
+
+.card-suerte {
+  flex: 0 0 15%;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+form input,
+form select {
+  padding: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #0d0d0d; /* Fondo oscuro */
+  color: var(--text-light);
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #151521;
+}
+
+form button:hover {
+  background: #00cc66;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0d0d0d; /* Fondo oscuro */
+  color: var(--text-light);
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  background: #151521;
+  color: var(--accent);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-form,
+  .card-compras,
+  .card-suerte {
+    flex: 1 1 95%;
+    max-width: 95%;
+  }
+}

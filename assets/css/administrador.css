@@ -1,0 +1,90 @@
+:root {
+  --bg-dark: #1e1e2f;     /* Fondo principal */
+  --bg-card: #2a2a3d;     /* Fondo cards */
+  --bg-table: #0d0d0d;    /* Fondo tablas/inputs */
+  --accent: #00ff88;      /* Verde acento */
+  --accent-hover: #00cc66;
+  --text-light: #e0e0e0;  /* Texto claro */
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Inter",sans-serif; }
+
+body {
+  display:flex; flex-direction:column; min-height:100vh;
+  background:var(--bg-dark); color:var(--text-light);
+}
+
+/* Header */
+header { background:#151521; padding:0.8rem; text-align:center; }
+.menu { display:flex; justify-content:center; gap:0.6rem; }
+.menu button {
+  background:var(--accent); color:#151521; border:none;
+  padding:0.5rem 1rem; border-radius:6px; cursor:pointer; font-weight:600; transition:0.2s;
+}
+.menu button:hover { background:var(--accent-hover); }
+
+/* Main */
+main { flex:1; display:flex; flex-direction:column; gap:8px; padding:15px; align-items:center; }
+
+/* Filas compactas y ordenadas */
+.row {
+  display:flex; gap:0.6rem; width:100%;
+  justify-content:space-between; align-items:flex-start; flex-wrap:nowrap;
+}
+
+/* Cards */
+.card {
+  background:var(--bg-card); color:var(--text-light);
+  padding:0.5rem; border-radius:5px; box-shadow:0 3px 10px rgba(0,0,0,0.25);
+}
+.card h3 { color:var(--accent); margin-bottom:0.6rem; }
+
+/* Proporciones resumen (tres en fila sin huecos) */
+.card-ventas     { flex:0 0 22%; min-width: 340px; }
+.card-comisiones { flex:0 0 32%; }
+.card-utilidad   { flex:0 0 40%; }
+
+/* Gestión (form + tabla) */
+.card-form  { flex:0 0 20%; min-width:340px; }
+.card-table { flex:0 0 75%; min-width:440px; }
+
+/* Formularios */
+form { display:flex; flex-direction:column; gap:0.6rem; }
+form input, form select {
+  padding:0.7rem; border:1px solid #333; border-radius:6px;
+  background:var(--bg-table); color:var(--text-light);
+}
+form input:focus, form select:focus { outline:none; border-color:var(--accent); box-shadow:0 0 4px var(--accent); }
+form button {
+  margin-top:0.4rem; padding:0.7rem; background:var(--accent); width: 50%;
+  border:none; border-radius:6px; cursor:pointer; font-weight:600; color:#151521;
+}
+form button:hover { background:var(--accent-hover); }
+
+/* Tablas */
+table {
+  width:100%; border-collapse:collapse; background:var(--bg-table); color:var(--text-light);
+}
+th, td {
+  padding:0.55rem; text-align:center; border-bottom:1px solid #333;
+}
+th { color:var(--accent); }
+
+/* Botones en tablas */
+td button {
+  background:var(--accent); border:none; padding:0.4rem 0.8rem;
+  border-radius:4px; cursor:pointer; font-weight:600; color:#151521;
+}
+td button:hover { background:var(--accent-hover); }
+
+/* Footer */
+footer { background:#151521; color:var(--accent); text-align:center; padding:0.8rem; }
+
+/* Responsive estricto (iPhone 4 y similares) */
+@media (max-width:480px) {
+  main { padding:0.6rem; gap:0.6rem; }
+  .row { flex-direction:column; align-items:center; gap:0.6rem; flex-wrap:wrap; }
+  .card, .card-form, .card-table,
+  .card-ventas, .card-comisiones, .card-utilidad { width:96%; max-width:96%; flex:0 0 auto; }
+  .menu { flex-direction:column; gap:0.4rem; }
+}
